@@ -1,1 +1,39 @@
-{     "devDependencies": {         "react-native-drawer": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-react-native-drawer",     "homepage": "https://github.com/npmdoc/node-npmdoc-react-native-drawer",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-react-native-drawer.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "api documentation for  [react-native-drawer (v2.3.0)](https://github.com/rt2zz/react-native-drawer)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "react-native-drawer": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-react-native-drawer",
+    "keywords": [
+        "documentation",
+        "react-native-drawer"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_react_native_drawer.js",
+    "name": "npmdoc-react-native-drawer",
+    "nameAlias": "npmdoc_react_native_drawer",
+    "nameOriginal": "npmdoc-react-native-drawer",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-react-native-drawer.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
